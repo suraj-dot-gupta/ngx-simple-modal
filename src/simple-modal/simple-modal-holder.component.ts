@@ -187,8 +187,9 @@ export class SimpleModalHolderComponent {
    * @param wrapperClass
    */
   private toggleWrapperClass(modalWrapperEl: ElementRef, wrapperClass: string): void {
+    console.log('wrapperClass', wrapperClass);
     const wrapperClassList = modalWrapperEl.nativeElement.classList;
-    const wrapperClassItems = wrapperClass.split(' ');
+    const wrapperClassItems = wrapperClass?.split(' ');
     if (wrapperClassList.toString().indexOf(wrapperClass) !== -1) {
       wrapperClassList.remove(...wrapperClassItems);
     } else {
